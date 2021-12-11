@@ -411,7 +411,7 @@ section a {
 	max-width: 1440px;
 	margin: 0 auto;
 	padding: 0 30px 30px;
-	
+
 }
 
 .footer-container p {
@@ -433,7 +433,172 @@ section a {
 /* FOOTER END */
 
 
+/* MENU */
+
+.menu {
+	display: none;
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+	position: relative;
+	background: none;
+	border: none;
+	z-index: 10;
+	transition: all 0.5s;
+}
+
+.menu-top,
+.menu-middle,
+.menu-bottom {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 24px;
+	height: 2px;
+	background-color: var(--black);
+	transform: rotate(0);
+	transition: all 0.5s;
+}
+
+.menu-middle {
+	transform: translateY(7px);
+}
+
+.menu-bottom {
+	transform: translateY(14px);
+}
+
+.open .menu-top {
+	transform: rotate(45deg) translateX(6px) translateY(6px);
+}
+
+.open .menu-middle {
+	display: none;
+}
+
+.open .menu-bottom {
+	transform: rotate(-45deg) translateX(-6px) translateY(6px);
+	
+}
+
+/* MENU END */
+
+/* MOBILE MENU */
+
+.mobile-menu {
+	position: absolute;
+	background-color: var(--white);
+	top: 81px;
+	right: 0;
+	width: 90%;
+	height: 100%;
+	padding: 30px;
+	box-shadow: inset 0 4px 3px -3px var(--shadow-color1), inset 0 4px 2px -2px var(--shadow-color2);
+	transition: all 0.5s;
+}
+
+.mobile-menu ul {
+	line-height: 3;
+	border-bottom: 1px solid var(--black);
+	padding-bottom: 10px;
+	margin-bottom: 30px;
+}
+
+.mobile-menu a {
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.mobile-menu a:hover {
+	color: var(--primary-color);
+}
+
+.mobile-menu div {
+	margin-top: 20px;
+}
+
+.mobile-menu div a {
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+}
+
+.hidden {
+	transform: translateX(100%);
+	display: none;
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+/* MOBILE MENU END */
+
+
+
 /* MEDIA QUERY */
+
+@media (max-width: 786px) {
+
+	.menu {
+		display: block;
+	}
+
+	.grid-col-2 {
+		grid-template-columns: 1fr;
+	}
+
+	.grid-reversed :first-child{
+		order: 0;
+	}
+
+	.bg-img {
+		width: 100%;
+	}
+
+	.navbar img {
+		height: 10%;
+		width: 10%;
+	}
+
+	.navbar .navbar-nav-right,
+	.navbar .navbar-nav-left {
+		display: none;
+	}
+
+	.box-e img {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.footer {
+		text-align: center;
+	}
+
+	.px-0 {
+		padding: 0;
+	}
+
+	.px-lg {
+		padding: 0;
+	}
+
+	.shadow-prim {
+	box-shadow: 0 0 0 0 transparent;
+	}
+
+	.shadow-red-yell {
+		box-shadow: 0 0 0 0 transparent;
+	}
+
+	.shadow-red-blue {
+		box-shadow: 0 0 0 0 transparent;
+	}
+
+	.shadow-md {
+		box-shadow: 0 0 0 0 transparent;
+	}
+}
 
 @media (max-width: 960px) {
 	.text-xl {
