@@ -110,6 +110,11 @@ section a {
 	color: var(--white);
 }
 
+.btn-light-outline:hover {
+	background-color: var(--white06);
+	box-shadow: 5px 5px 0 0 var(--blue), -5px -5px 0 0 var(--yellow), 0 0 2px var(--shadow-color3);
+}
+
 .btn-dark {
 	background-color: var(--black);
 	color: var(--white);
@@ -173,6 +178,24 @@ section a {
 }
 
 /* TEXT END */
+
+/* TRANSFORM  */
+
+.skewX {
+	transform: skewX(360deg);
+}
+
+/*TRNASFORM END */
+
+/* DISPLAY */
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* DISPLAY END */
 
 /* GRID  */
 
@@ -283,9 +306,10 @@ section a {
 
 .navbar-brand img:hover {
 	transform: scale(1.1);
-	box-shadow: 0 1px 3px var(--shadow-color1), 0 2px 2px var(--shadow-color2), 0 0 2px var(--shadow-color3);
+	/*box-shadow: 0 1px 3px var(--shadow-color1), 0 2px 2px var(--shadow-color2), 0 0 2px var(--shadow-color3);*/
 	filter: contrast(100%) saturate(150%);
 	box-shadow: 5px 5px 0 0 var(--primary-color), -5px -5px 0 0 var(--secondary-color), 0 0 2px var(--shadow-color3);
+	/*box-shadow: -5px -5px 0 0 var(--primary-color), 5px -5px  0 0 var(--secondary-color), -5px 5px 0 0 var(--blue), 5px 5px 0 0 var(--yellow);*/
 }
 
 .navbar-nav-left {
@@ -326,6 +350,9 @@ section a {
 
 .box {
 	margin-bottom: 30px;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
 }
 
 .box-inner {
@@ -337,11 +364,40 @@ section a {
 	max-width: 500px;
 	text-align: center;
 	justify-content: center;
+	padding: 20px 0;
+}
+
+.box-content .btn {
+	margin-top: 20px;
+}
+
+.box-d {
+	width: 900px;
+	box-shadow: 5px 0 0 0 var(--red), 10px 0 0 0 var(--primary-color), -5px 0 0 0 var(--secondary-color), -10px 0 0 0 var(--yellow);
+}
+
+.box-d img:hover {
+	animation: huerotate 0.5s infinite linear;
+}
+
+.bod-d-text:hover {
+	animation: huerotate 0.5s infinite linear;
+}
+
+.box-d .box-content h2, p {
+	color: var(--white);
 }
 
 .box-e img {
 	width: 70%;
 	margin-right: 0;
+}
+
+.img-box-f {
+	/*transform: translateX(10px);*/
+	justify-content: center;
+	align-items: center;
+	width: 100%;
 }
 
 
@@ -365,3 +421,17 @@ section a {
 }
 
 /* MEDIA QUERY END */
+
+
+/* KEYFRAMES */
+
+@keyframes huerotate {
+	from{
+		filter: hue-rotate(0deg);
+	}
+	to{
+		filter: hue-rotate(360deg);
+	}
+}
+
+/* KEYFRAMES END */
